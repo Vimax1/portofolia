@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ContextProvider from "@/context/contextprovider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +12,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={
+          inter.className +
+          "w-full h-screen overflow-hidden bg-[url('/site-bg.svg')]   text-white bg-cover bg-no-repeat relative"
+        }
+      >
+        <ContextProvider>{children}</ContextProvider>
+      </body>
     </html>
   );
 }

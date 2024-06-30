@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.pp{
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); text-align: center; padding-bottom: 20px;
+}
 .translate-z-0 {
   transform: translateZ(0px);
 }
@@ -18,7 +21,7 @@
   color: #f13024;
 }
 
-@layer base {
+/* @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
   }
@@ -48,4 +51,4 @@
   .textarea {
     @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
   }
-}
+} */
